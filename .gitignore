@@ -1,0 +1,4 @@
+*.zip
+*.iml
+__pycache__
+model_logs
