@@ -1,1 +1,4 @@
 *.zip
+model_logs
+__pycache__
+*.csv
