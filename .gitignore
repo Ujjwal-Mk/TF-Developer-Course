@@ -2,3 +2,9 @@
 model_logs
 __pycache__
 *.csv
+101_food*
+*.jpeg
+custom_food_images/
+tensorflow_course/
+06_101_food_class_10_percent_saved_big_dog_model
+__MACOSX/
