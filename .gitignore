@@ -9,3 +9,5 @@ tensorflow_course/
 06_101_food_class_10_percent_saved_big_dog_model
 __MACOSX/
 08_model_6_USE_feature_extractor/
+model_checkpoint/
+07_efficientnetb0_feature_extract_model_mixed_precision/
