@@ -3,6 +3,20 @@
 
 import tensorflow as tf
 
+def importTensorflow():
+    from tensorflow.keras import mixed_precision
+    print(tf.__version__)
+    gpus = tf.config.list_physical_devices('GPU')
+    if gpus:
+      try:
+        tf.config.set_logical_device_configuration(gpus[0],
+                                                   [tf.config.LogicalDeviceConfiguration(memory_limit=4000)])
+        logical_gpus = tf.config.list_logical_devices('GPU')
+        # print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+      except RuntimeError as e:
+        print(e)
+    mixed_precision.set_global_policy('mixed_float16')
+
 # Create a function to import an image and resize it to be able to be used with our model
 def load_and_prep_image(filename, img_shape=224, scale=True):
   """
