@@ -1,0 +1,73 @@
+[W 2023-12-27 12:05:42.991 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[W 2023-12-27 12:05:43.074 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-12-27 12:05:43.075 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-12-27 12:05:43.077 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-12-27 12:05:43.080 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-12-27 12:05:43.082 ServerApp] notebook | extension was successfully linked.
+[I 2023-12-27 12:05:43.209 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-12-27 12:05:43.229 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-12-27 12:05:43.230 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-12-27 12:05:43.231 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-12-27 12:05:43.235 LabApp] JupyterLab extension loaded from /home/ujjwal/miniconda3/envs/tf/lib/python3.9/site-packages/jupyterlab
+[I 2023-12-27 12:05:43.235 LabApp] JupyterLab application directory is /home/ujjwal/miniconda3/envs/tf/share/jupyter/lab
+[I 2023-12-27 12:05:43.236 LabApp] Extension Manager is 'pypi'.
+[I 2023-12-27 12:05:43.238 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-12-27 12:05:43.239 ServerApp] notebook | extension was successfully loaded.
+[I 2023-12-27 12:05:43.240 ServerApp] Serving notebooks from local directory: /home/ujjwal/Developer/Tensorflow
+[I 2023-12-27 12:05:43.240 ServerApp] Jupyter Server 2.12.1 is running at:
+[I 2023-12-27 12:05:43.240 ServerApp] http://localhost:8888/tree?token=7e62a9d276bdc24d870f236a274e13a2d921c81ee0707037
+[I 2023-12-27 12:05:43.240 ServerApp]     http://127.0.0.1:8888/tree?token=7e62a9d276bdc24d870f236a274e13a2d921c81ee0707037
+[I 2023-12-27 12:05:43.240 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-12-27 12:05:43.436 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-12-27 12:05:43.436 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ujjwal/.local/share/jupyter/runtime/jpserver-7957-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=7e62a9d276bdc24d870f236a274e13a2d921c81ee0707037
+        http://127.0.0.1:8888/tree?token=7e62a9d276bdc24d870f236a274e13a2d921c81ee0707037
+[I 2023-12-27 12:05:43.593 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[I 2023-12-27 12:05:49.688 ServerApp] Interrupted...
+[W 2023-12-27 12:05:53.576 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[W 2023-12-27 12:05:53.614 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2023-12-27 12:05:53.615 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2023-12-27 12:05:53.617 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2023-12-27 12:05:53.620 ServerApp] jupyterlab | extension was successfully linked.
+[I 2023-12-27 12:05:53.622 ServerApp] notebook | extension was successfully linked.
+[I 2023-12-27 12:05:53.743 ServerApp] notebook_shim | extension was successfully linked.
+[I 2023-12-27 12:05:53.753 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2023-12-27 12:05:53.755 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2023-12-27 12:05:53.755 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2023-12-27 12:05:53.756 LabApp] JupyterLab extension loaded from /home/ujjwal/miniconda3/envs/tf/lib/python3.9/site-packages/jupyterlab
+[I 2023-12-27 12:05:53.756 LabApp] JupyterLab application directory is /home/ujjwal/miniconda3/envs/tf/share/jupyter/lab
+[I 2023-12-27 12:05:53.756 LabApp] Extension Manager is 'pypi'.
+[I 2023-12-27 12:05:53.758 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2023-12-27 12:05:53.759 ServerApp] notebook | extension was successfully loaded.
+[I 2023-12-27 12:05:53.760 ServerApp] Serving notebooks from local directory: /home/ujjwal/Developer/Tensorflow
+[I 2023-12-27 12:05:53.760 ServerApp] Jupyter Server 2.12.1 is running at:
+[I 2023-12-27 12:05:53.760 ServerApp] http://localhost:8888/tree?token=51ce62c817e0d987ce8de04dfc6419b5597039c156e530e6
+[I 2023-12-27 12:05:53.760 ServerApp]     http://127.0.0.1:8888/tree?token=51ce62c817e0d987ce8de04dfc6419b5597039c156e530e6
+[I 2023-12-27 12:05:53.760 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 2023-12-27 12:05:54.007 ServerApp] No web browser found: Error('could not locate runnable browser').
+[C 2023-12-27 12:05:54.007 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/ujjwal/.local/share/jupyter/runtime/jpserver-7961-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/tree?token=51ce62c817e0d987ce8de04dfc6419b5597039c156e530e6
+        http://127.0.0.1:8888/tree?token=51ce62c817e0d987ce8de04dfc6419b5597039c156e530e6
+[I 2023-12-27 12:05:54.160 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2023-12-27 12:06:08.749 ServerApp] Notebook 09_TF_Developer_Certificate_Course.ipynb is not trusted
+[W 2023-12-27 12:06:10.277 ServerApp] Notebook 09_TF_Developer_Certificate_Course.ipynb is not trusted
+[I 2023-12-27 12:06:10.590 ServerApp] Kernel started: dd4e68da-a1ac-4636-a3a6-dd3ea55d0baa
+[I 2023-12-27 12:06:10.931 ServerApp] Connecting to kernel dd4e68da-a1ac-4636-a3a6-dd3ea55d0baa.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1703659007.292601    8059 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+[I 2023-12-27 12:08:10.362 ServerApp] Saving file at /09_TF_Developer_Certificate_Course.ipynb
+[W 2023-12-27 12:08:10.379 ServerApp] Notebook 09_TF_Developer_Certificate_Course.ipynb is not trusted
+[I 2023-12-27 12:08:22.575 ServerApp] AsyncIOLoopKernelRestarter: restarting kernel (1/5), keep random ports
+[W 2023-12-27 12:08:22.576 ServerApp] kernel dd4e68da-a1ac-4636-a3a6-dd3ea55d0baa restarted
+[I 2023-12-27 12:08:22.587 ServerApp] Starting buffering for dd4e68da-a1ac-4636-a3a6-dd3ea55d0baa:f2f50364-9fff-4983-935e-00a377953c74
+[I 2023-12-27 12:08:22.927 ServerApp] Connecting to kernel dd4e68da-a1ac-4636-a3a6-dd3ea55d0baa.
+[I 2023-12-27 12:08:22.927 ServerApp] Restoring connection for dd4e68da-a1ac-4636-a3a6-dd3ea55d0baa:f2f50364-9fff-4983-935e-00a377953c74
+[I 2023-12-27 12:08:32.325 ServerApp] Starting buffering for dd4e68da-a1ac-4636-a3a6-dd3ea55d0baa:f2f50364-9fff-4983-935e-00a377953c74
