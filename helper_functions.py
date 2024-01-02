@@ -3,19 +3,29 @@
 
 import tensorflow as tf
 
-def importTensorflow():
+def importTensorflow(memory=None, precision=False):
     from tensorflow.keras import mixed_precision
     print(tf.__version__)
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
       try:
-        tf.config.set_logical_device_configuration(gpus[0],
-                                                   [tf.config.LogicalDeviceConfiguration(memory_limit=4000)])
-        logical_gpus = tf.config.list_logical_devices('GPU')
-        # print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+        if memory!=None:
+            tf.config.set_logical_device_configuration(gpus[0],
+                                                       [tf.config.LogicalDeviceConfiguration(memory_limit=memory)])
+            logical_gpus = tf.config.list_logical_devices('GPU')
+            print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+        elif memory==None:
+            logical_gpus = tf.config.list_logical_devices('GPU')
+            tf.config.experimental.set_memory_growth(gpus[0], True)
+            print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
       except RuntimeError as e:
-        print(e)
-    mixed_precision.set_global_policy('mixed_float16')
+          print(e)
+          pass    
+    if precision==True:
+        mixed_precision.set_global_policy('mixed_float16')
+        print(mixed_precision.global_policy())
+    elif precision==False:
+        print(mixed_precision.global_policy())
 
 # Create a function to import an image and resize it to be able to be used with our model
 def load_and_prep_image(filename, img_shape=224, scale=True):
