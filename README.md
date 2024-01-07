@@ -27,7 +27,7 @@ The repository contains:
 
 ## How to Use This Repository
 
-If you are also pursuing the [TensorFlow Developer Certificate: Machine Learning Zero to Mastery](https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/) course on Udemy or exploring the world of machine learning and deep learning, feel free to browse through the materials. You can find my solutions to assignments and exercises in their respective directories.
+If you are also pursuing the [TensorFlow Developer Certificate: Machine Learning Zero to Mastery](https://www.udemy.com/course/tensorflow-developer-certificate-machine-learning-zero-to-mastery/) course on Udemy or exploring the world of machine learning and deep learning, feel free to browse through the materials. You can find my solutions to assignments and exercises in their respective notebooks.
 
 ## Acknowledgments
 
