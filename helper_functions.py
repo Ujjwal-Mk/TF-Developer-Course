@@ -4,7 +4,6 @@
 import tensorflow as tf
 
 def importTensorflow(memory=None, precision=False):
-    from tensorflow.keras import mixed_precision
     print(tf.__version__)
     gpus = tf.config.list_physical_devices('GPU')
     if gpus:
@@ -20,11 +19,15 @@ def importTensorflow(memory=None, precision=False):
             print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
       except RuntimeError as e:
           print(e)
-          pass    
-    if precision==True:
+          pass
+
+def precision(set=True):
+    from tensorflow.keras import mixed_precision
+    if set==True:
         mixed_precision.set_global_policy('mixed_float16')
         print(mixed_precision.global_policy())
-    elif precision==False:
+    elif set==False:
+        tf.keras.mixed_precision.set_global_policy('float32')
         print(mixed_precision.global_policy())
 
 # Create a function to import an image and resize it to be able to be used with our model
@@ -310,3 +313,63 @@ def calculate_results(y_true, y_pred):
                   "recall": model_recall,
                   "f1": model_f1}
   return model_results
+
+
+def preprocess_text_with_line_numbers(filename):
+    def get_lines(filename1):
+        with open(filename1, "r") as f:
+            return f.readlines()
+
+    input_lines = get_lines(
+        filename)  # get all lines from filename
+    abstract_lines = ""  # create an empty abstract
+    abstract_samples = []  # create an empty list of abstracts
+
+    # Loop through each line in target file
+    for line in input_lines:
+        if line.startswith(
+                "###"):  # check to see if line is an ID line
+            abstract_id = line
+            abstract_lines = ""  # reset abstract string
+        elif line.isspace():  # check to see if line is a new line
+            abstract_line_split = abstract_lines.splitlines()  # split abstract into separate lines
+
+            # Iterate through each line in abstract and count them at the same time
+            for abstract_line_number, abstract_line in enumerate(
+                    abstract_line_split):
+                line_data = {}  # create empty dict to store data from line
+                target_text_split = abstract_line.split(
+                    "\t")  # split target label from text
+                line_data["target"] = target_text_split[
+                    0]  # get target label
+                line_data["text"] = target_text_split[
+                    1].lower()  # get target text and lower it
+                line_data[
+                    "line_number"] = abstract_line_number  # what number line does the line appear in the abstract?
+                line_data["total_lines"] = len(
+                    abstract_line_split) - 1  # how many total lines are in the abstract? (start from 0)
+                abstract_samples.append(
+                    line_data)  # add line data to abstract samples list
+
+        else:  # if the above conditions aren't fulfilled, the line contains a labelled sentence
+            abstract_lines += line
+
+    return abstract_samples
+
+
+def make_windows(dataframe, windows_size=7, horizon=1, split_size=0.8, copy=True):
+    windows = []
+    labels = []
+    if copy:
+        dataframe = dataframe.copy()
+    for i in range(1,windows_size+horizon):
+        dataframe[f"Price:t-{i}"] = dataframe.Price.shift(i)
+    dataframe = dataframe.dropna()
+    for row in dataframe.itertuples():
+        windows.append(list(row[horizon+1:][::-1]))
+        if horizon == 1:
+            labels.append([row[horizon]])
+        else:
+            labels.append(row[1:horizon+1])
+    split_size1 = int(split_size*len(dataframe))
+    return np.asarray(windows[:split_size1]), np.asarray(windows[split_size1:]), np.asarray(labels[:split_size1]), np.asarray(labels[split_size1:])
